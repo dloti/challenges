@@ -15,7 +15,7 @@ def get_tags():
     Replace dash with whitespace.
     Hint: use TAG_HTML.findall"""
     with open(RSS_FEED) as feed:
-        return TAG_HTML.findall(feed.read().replace('-', ' '))
+        return TAG_HTML.findall(feed.read().lower().replace('-', ' '))
 
 
 def get_top_tags(tags):
